@@ -19,7 +19,14 @@ Once this is done, you can call your executable with `--crescendo`.
 .\ConsoleApp.exe --crescendo
 ```
 
-A crescendo JSON file will be generated. You can then import that module and call the imported cmdlets. 
+A crescendo JSON file will be generated. Create your module with Crescendo.
+
+```powershell
+Install-Module Microsoft.PowerShell.Crescendo 
+Export-CrescendoModule -ConfigurationFile ConsoleApp.crescendo.json -ModuleName ConsoleApp
+```
+
+You can then import that module and call the imported cmdlets. 
 
 ```
 PS> Import-Module .\ConsoleApp.psd1
